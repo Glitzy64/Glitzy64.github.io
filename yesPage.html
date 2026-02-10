@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="yesStyle.css">
 </head>
 <body>
-    <audio autoplay loop> <source src="angbalikatatbaywang.mp3" type="audio/mpeg"/> your browser kineme </audio>    
+<audio id="bgMusic" loop>
+    <source src="angbalikatatbaywang.mp3" type="audio/mpeg">
+</audio>
     <div class="container">
         <h1 class="header_text">Knew you would say yes!</h1>
         <div class="gif_container">
@@ -16,5 +18,12 @@
         </div>
     </div>
     <script src="scriptYes.js"></script>
+    
+<script>
+document.addEventListener("click", function () {
+    const audio = document.getElementById("bgMusic");
+    audio.play();
+}, { once: true });
+</script>
 </body>
 </html>
